@@ -1,4 +1,6 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
 const kpis = [
   { label: "Active members", value: "3,482", delta: "+6.2%" },
   { label: "Weekly retention", value: "41%", delta: "+2.1%" },
@@ -30,20 +32,15 @@ const points = series
   .join(" ");
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard — Template</title>
-  </head>
-  <body class="min-h-screen bg-zinc-950 text-zinc-100">
+<BaseLayout title="Dashboard - Dashboard Demo" description="Example KPI dashboard (no auth).">
+  <section class="bg-zinc-950 text-zinc-100">
     <main class="mx-auto max-w-5xl px-6 py-10">
       <div class="flex items-start justify-between gap-6">
         <div>
-          <h1 class="text-3xl font-semibold tracking-tight">Dashboard demo (Example niche)</h1>
+          <h1 class="text-3xl font-semibold tracking-tight">Dashboard demo</h1>
           <p class="mt-2 text-zinc-300 max-w-2xl">
             A clean, no-auth dashboard layout you can rapidly adapt for any niche.
-            Swap the KPIs, data model, and labels — ship a prototype fast.
+            Swap the KPIs, dataset, and labels to ship a prototype fast.
           </p>
         </div>
         <a href="/" class="rounded-lg border border-white/15 px-4 py-2 text-sm text-zinc-200 hover:bg-white/5">Home</a>
@@ -61,7 +58,7 @@ const points = series
 
       <section class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
         <div class="flex items-center justify-between">
-          <h2 class="text-lg font-semibold">Creator engagement snapshot</h2>
+          <h2 class="text-lg font-semibold">Engagement snapshot</h2>
           <div class="text-xs text-zinc-400">Example time series</div>
         </div>
         <div class="mt-4 overflow-x-auto">
@@ -94,16 +91,16 @@ const points = series
         <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
           <h3 class="font-semibold">Integrations</h3>
           <p class="mt-2 text-sm text-zinc-300">
-            Replace the synthetic dataset with a real adapter: Stripe, Discord, Circle, Airtable, Shopify, custom DB.
+            Replace the synthetic dataset with a real adapter: Stripe, Discord, Airtable, Shopify, or a custom API.
           </p>
         </div>
         <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
           <h3 class="font-semibold">Prototype delivery</h3>
           <p class="mt-2 text-sm text-zinc-300">
-            This template is designed to be shipped as a public demo (no auth) so prospects can see the concept immediately.
+            Built to be a public demo (no auth) so prospects can see the concept immediately.
           </p>
         </div>
       </section>
     </main>
-  </body>
-</html>
+  </section>
+</BaseLayout>

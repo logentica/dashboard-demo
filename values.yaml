@@ -1,7 +1,7 @@
-namespace: simple-demo
+namespace: dashboard-demo
 site:
   name: "dashboard-demo"
-  description: OpenSaaS Full-Stack Application for simple-demo
+  description: Public-facing landing page + no-auth dashboard demo
 image:
   repository: registry.buildville.cloud/buildville/dashboard-demo
   tag: '3'
@@ -22,12 +22,12 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
   hosts:
-    - host: simple-demo.buildville.cloud
+    - host: dashboard-demo.buildville.cloud
   tls:
     enabled: true
-  tlsSecretName: simple-demo-tls
+  tlsSecretName: dashboard-demo-tls
 healthCheck:
   path: /health
   initialDelaySeconds: 5
   periodSeconds: 10
-githubRepo: https://github.com/logentica/simple-demo.git
+githubRepo: https://github.com/logentica/dashboard-demo.git

@@ -2,21 +2,21 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Simple Site - Fast & Beautiful Websites">
+<BaseLayout title="Dashboard Demo - A Shareable KPI Dashboard" description="A no-auth dashboard demo for quick prototypes and sales calls.">
   <!-- Hero Section -->
   <section class="py-20 lg:py-32 bg-gradient-to-br from-primary-50 to-white">
     <div class="container">
       <div class="max-w-3xl mx-auto text-center">
         <h1 class="text-gray-900 mb-6">
-          Build <span class="text-primary-600">Beautiful</span> Websites Fast
+          Ship a <span class="text-primary-600">Dashboard</span> Demo in an Afternoon
         </h1>
         <p class="text-xl text-gray-600 mb-10">
-          A simple, lightweight template for creating stunning websites without the complexity. 
-          No databases, no authentication - just pure, fast content.
+          A clean landing page plus a no-auth KPI dashboard you can use for screenshots, walkthroughs, and prototypes.
+          Fully static. Fast to load. Easy to customize.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/dashboard" class="btn btn-primary">
-            View Dashboard
+            Open Dashboard
           </a>
           <a href="/about" class="btn btn-secondary">
             Learn More
@@ -30,9 +30,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section id="features" class="py-20">
     <div class="container">
       <div class="text-center mb-16">
-        <h2 class="text-gray-900 mb-4">Why Choose This Template?</h2>
+        <h2 class="text-gray-900 mb-4">What You Get</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Everything you need to build fast, modern websites without the bloat.
+          The essentials for a polished demo: landing page, dashboard page, and a simple blog.
         </p>
       </div>
       
@@ -46,7 +46,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3 class="text-xl mb-2">Lightning Fast</h3>
           <p class="text-gray-600">
-            Static site generation means your site loads instantly. No server delays, no database queries.
+            Static build served by nginx. No server-side rendering, no database queries.
           </p>
         </div>
         
@@ -59,7 +59,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3 class="text-xl mb-2">Simple Setup</h3>
           <p class="text-gray-600">
-            One container, minimal configuration. Deploy in minutes with our GitOps workflow.
+            One container, minimal configuration. Deploy via GitHub Actions and ArgoCD.
           </p>
         </div>
         
@@ -72,7 +72,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3 class="text-xl mb-2">Flexible</h3>
           <p class="text-gray-600">
-            Use React, Vue, or Svelte components via islands. Add interactivity where you need it.
+            Add interactivity with Astro islands (React supported). Keep the rest static.
           </p>
         </div>
       </div>
@@ -83,28 +83,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="py-20 bg-gray-50">
     <div class="container">
       <div class="text-center mb-16">
-        <h2 class="text-gray-900 mb-4">Perfect For</h2>
+        <h2 class="text-gray-900 mb-4">Great For</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          This template works great for a variety of projects.
+          Quick public demos and product previews.
         </p>
       </div>
       
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white rounded-lg p-6 border border-gray-100">
-          <h4 class="font-semibold text-gray-900 mb-2">Blogs</h4>
-          <p class="text-sm text-gray-600">Content collections with MDX support</p>
+          <h4 class="font-semibold text-gray-900 mb-2">Sales Walkthroughs</h4>
+          <p class="text-sm text-gray-600">A link you can send without login</p>
         </div>
         <div class="bg-white rounded-lg p-6 border border-gray-100">
-          <h4 class="font-semibold text-gray-900 mb-2">Portfolios</h4>
-          <p class="text-sm text-gray-600">Showcase your work beautifully</p>
+          <h4 class="font-semibold text-gray-900 mb-2">Screenshots</h4>
+          <p class="text-sm text-gray-600">KPI cards and charts for decks</p>
         </div>
         <div class="bg-white rounded-lg p-6 border border-gray-100">
-          <h4 class="font-semibold text-gray-900 mb-2">Landing Pages</h4>
-          <p class="text-sm text-gray-600">Marketing and product pages</p>
+          <h4 class="font-semibold text-gray-900 mb-2">Prototypes</h4>
+          <p class="text-sm text-gray-600">Swap labels, ship a niche demo fast</p>
         </div>
         <div class="bg-white rounded-lg p-6 border border-gray-100">
-          <h4 class="font-semibold text-gray-900 mb-2">Web Games</h4>
-          <p class="text-sm text-gray-600">Static HTML/JS games and apps</p>
+          <h4 class="font-semibold text-gray-900 mb-2">Benchmarks</h4>
+          <p class="text-sm text-gray-600">Compare UI iterations quickly</p>
         </div>
       </div>
     </div>
@@ -116,10 +116,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="max-w-2xl mx-auto text-center">
         <h2 class="text-gray-900 mb-4">Ready to Get Started?</h2>
         <p class="text-lg text-gray-600 mb-8">
-          Clone the template, customize it, and deploy. It's that simple.
+          Fork the repo, tweak the copy and KPIs, and deploy.
         </p>
-        <a href="https://github.com/logentica/simple-template" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          View on GitHub
+        <a href="https://github.com/logentica/dashboard-demo" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          View Source
         </a>
       </div>
     </div>
