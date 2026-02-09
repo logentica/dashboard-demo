@@ -1,10 +1,10 @@
 ---
-title: 'Welcome to Simple Site'
-description: 'Getting started with your new Astro-based website template.'
+title: 'Welcome to Dashboard Demo'
+description: 'How to customize this no-auth dashboard demo.'
 pubDate: 2026-02-06
 ---
 
-Welcome to your new website! This is a sample blog post to demonstrate how content works in the Simple Site template.
+Welcome! This is a sample post showing how content works in this repo.
 
 ## Writing Content
 
@@ -20,7 +20,7 @@ pubDate: 2026-02-06
 
 ## Features
 
-This template includes:
+This repo includes:
 
 - **Astro 5** for blazing-fast static site generation
 - **Tailwind CSS** for utility-first styling

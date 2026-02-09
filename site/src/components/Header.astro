@@ -1,6 +1,7 @@
 ---
 const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/dashboard', label: 'Dashboard' },
   { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
 ];
@@ -13,7 +14,7 @@ const currentPath = Astro.url.pathname;
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <a href="/" class="text-xl font-bold text-primary-600 hover:text-primary-700">
-        Simple Site
+        Dashboard Demo
       </a>
       
       <!-- Desktop Navigation -->
@@ -35,8 +36,8 @@ const currentPath = Astro.url.pathname;
       
       <!-- CTA Button -->
       <div class="hidden md:block">
-        <a href="#contact" class="btn btn-primary text-sm">
-          Get Started
+        <a href="/dashboard" class="btn btn-primary text-sm">
+          Open Dashboard
         </a>
       </div>
       
@@ -68,8 +69,8 @@ const currentPath = Astro.url.pathname;
             {link.label}
           </a>
         ))}
-        <a href="#contact" class="btn btn-primary text-sm text-center">
-          Get Started
+        <a href="/dashboard" class="btn btn-primary text-sm text-center">
+          Open Dashboard
         </a>
       </div>
     </div>
