@@ -1,52 +1,28 @@
 ---
 title: 'Welcome to Dashboard Demo'
-description: 'How to customize this no-auth dashboard demo.'
+description: 'A quick tour of what this dashboard demo includes and how to adapt it.'
 pubDate: 2026-02-06
 ---
 
-Welcome! This is a sample post showing how content works in this repo.
+This project is a small, static site meant to be shared publicly: a landing page plus an example KPI dashboard.
 
-## Writing Content
+## What's included
 
-Blog posts are written in Markdown (or MDX) and stored in the `src/content/blog/` directory. Each post needs frontmatter with at least these fields:
+- Landing page at `/` (copy + CTA)
+- Dashboard at `/dashboard` (KPI cards + a simple time-series chart)
+- About page at `/about`
+- Health endpoint at `/health` for ingress checks
 
-```yaml
----
-title: 'Your Post Title'
-description: 'A brief description for SEO and previews'
-pubDate: 2026-02-06
----
-```
+## How to adapt the dashboard
 
-## Features
+The dashboard page is intentionally simple and uses a synthetic dataset.
 
-This repo includes:
+- Update KPI labels/values in `site/src/pages/dashboard.astro`
+- Swap the chart series with your own data (or embed a charting library)
+- Adjust styling via `site/src/styles/global.css` (Tailwind components live there)
 
-- **Astro 5** for blazing-fast static site generation
-- **Tailwind CSS** for utility-first styling
-- **React support** via Astro islands for interactive components
-- **Content Collections** for type-safe content management
-- **Automatic sitemap and RSS** (can be added via Astro integrations)
+## Blog posts
 
-## Customization
+Posts live in `site/src/content/blog/`. Keep them focused on the demo: what it shows, what to customize, and example use cases.
 
-To customize this site:
-
-1. Update `src/layouts/BaseLayout.astro` to change the site layout
-2. Edit components in `src/components/` to modify the header, footer, etc.
-3. Change the Tailwind theme in `tailwind.config.mjs`
-4. Update the Plausible analytics domain in `BaseLayout.astro`
-
-## Adding Interactivity
-
-Need a React component? Create it in `src/components/react/` and use Astro's client directives:
-
-```astro
----
-import Counter from '../components/react/Counter';
----
-
-<Counter client:load />
-```
-
-Happy building!
+If you don't need a blog, remove the `/blog` route and the link in `site/src/components/Header.astro`.
