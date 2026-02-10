@@ -33,74 +33,81 @@ const points = series
 ---
 
 <BaseLayout title="Dashboard - Dashboard Demo" description="Example KPI dashboard (no auth).">
-  <section class="bg-zinc-950 text-zinc-100">
-    <main class="mx-auto max-w-5xl px-6 py-10">
-      <div class="flex items-start justify-between gap-6">
-        <div>
-          <h1 class="text-3xl font-semibold tracking-tight">Dashboard demo</h1>
-          <p class="mt-2 text-zinc-300 max-w-2xl">
-            A clean, no-auth dashboard layout you can rapidly adapt for any niche.
-            Swap the KPIs, dataset, and labels to ship a prototype fast.
-          </p>
-        </div>
-        <a href="/" class="rounded-lg border border-white/15 px-4 py-2 text-sm text-zinc-200 hover:bg-white/5">Home</a>
-      </div>
-
-      <section class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {kpis.map((k) => (
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <div class="text-xs uppercase tracking-wider text-zinc-400">{k.label}</div>
-            <div class="mt-2 text-2xl font-semibold">{k.value}</div>
-            <div class="mt-1 text-sm text-emerald-300">{k.delta}</div>
+  <section class="py-12 bg-gray-50">
+    <div class="container">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-start justify-between gap-6">
+          <div>
+            <h1 class="text-3xl font-semibold tracking-tight text-gray-900">Dashboard demo</h1>
+            <p class="mt-2 text-gray-600 max-w-2xl">
+              A public, no-auth KPI dashboard layout you can adapt for any niche.
+              Swap the dataset and labels to ship a polished prototype fast.
+            </p>
           </div>
-        ))}
-      </section>
+        </div>
 
-      <section class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
-        <div class="flex items-center justify-between">
-          <h2 class="text-lg font-semibold">Engagement snapshot</h2>
-          <div class="text-xs text-zinc-400">Example time series</div>
-        </div>
-        <div class="mt-4 overflow-x-auto">
-          <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} class="block">
-            <polyline
-              points={points}
-              fill="none"
-              stroke="rgba(255,255,255,0.85)"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            {series.map((s, i) => {
-              const x = pad + i * step;
-              const y = pad + (1 - s.v / maxV) * (height - pad * 2);
-              return (
-                <g>
-                  <circle cx={x} cy={y} r="3.5" fill="rgba(255,255,255,0.9)" />
-                  <text x={x} y={height - 4} text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.55)">
-                    {s.day}
-                  </text>
-                </g>
-              );
-            })}
-          </svg>
-        </div>
-      </section>
+        <section class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {kpis.map((k) => (
+            <div class="card p-5">
+              <div class="text-xs uppercase tracking-wider text-gray-500">{k.label}</div>
+              <div class="mt-2 text-2xl font-semibold text-gray-900">{k.value}</div>
+              <div class="mt-1 text-sm text-emerald-700">{k.delta}</div>
+            </div>
+          ))}
+        </section>
 
-      <section class="mt-6 grid gap-6 lg:grid-cols-2">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="font-semibold">Integrations</h3>
-          <p class="mt-2 text-sm text-zinc-300">
-            Replace the synthetic dataset with a real adapter: Stripe, Discord, Airtable, Shopify, or a custom API.
-          </p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="font-semibold">Prototype delivery</h3>
-          <p class="mt-2 text-sm text-zinc-300">
-            Built to be a public demo (no auth) so prospects can see the concept immediately.
-          </p>
-        </div>
-      </section>
-    </main>
+        <section class="mt-6 card p-6">
+          <div class="flex items-center justify-between gap-4">
+            <h2 class="text-lg font-semibold text-gray-900">Engagement snapshot</h2>
+            <div class="text-xs text-gray-500">Example time series</div>
+          </div>
+          <div class="mt-4 overflow-x-auto">
+            <svg
+              viewBox={`0 0 ${width} ${height}`}
+              preserveAspectRatio="xMinYMin meet"
+              class="block w-full min-w-[640px]"
+              aria-label="Engagement time series chart"
+              role="img"
+            >
+              <polyline
+                points={points}
+                fill="none"
+                stroke="rgb(17 24 39)"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              {series.map((s, i) => {
+                const x = pad + i * step;
+                const y = pad + (1 - s.v / maxV) * (height - pad * 2);
+                return (
+                  <g>
+                    <circle cx={x} cy={y} r="3.5" fill="rgb(17 24 39)" />
+                    <text x={x} y={height - 4} text-anchor="middle" font-size="10" fill="rgba(17,24,39,0.6)">
+                      {s.day}
+                    </text>
+                  </g>
+                );
+              })}
+            </svg>
+          </div>
+        </section>
+
+        <section class="mt-6 grid gap-6 lg:grid-cols-2">
+          <div class="card">
+            <h3 class="font-semibold text-gray-900">Integrations</h3>
+            <p class="mt-2 text-sm text-gray-600">
+              Replace the synthetic dataset with a real adapter: Stripe, Discord, Airtable, Shopify, or a custom API.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold text-gray-900">Prototype delivery</h3>
+            <p class="mt-2 text-sm text-gray-600">
+              Designed as a public demo (no auth) so prospects can see the concept immediately.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
   </section>
 </BaseLayout>
