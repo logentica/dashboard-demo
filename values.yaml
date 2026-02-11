@@ -4,7 +4,7 @@ site:
   description: Public-facing landing page + no-auth dashboard demo
 image:
   repository: registry.buildville.cloud/buildville/dashboard-demo
-  tag: '5'
+  tag: '6'
   pullPolicy: Always
 service:
   port: 80
