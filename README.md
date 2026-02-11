@@ -1,13 +1,12 @@
-# Simple Template
+# Dashboard Demo
 
-A lightweight website template for the Buildville platform. Perfect for static sites, blogs, portfolios, landing pages, and web games that don't need user authentication or databases.
+A lightweight static site (landing page + public KPI dashboard) deployed on the Buildville platform.
 
 ## Quick Start
 
-1. **Clone this template** to create a new repository
-2. **Update `values.yaml`** with your site name and domain
-3. **Customize the site** in the `site/` directory
-4. **Push to GitHub** - deployment is automatic
+1. **Update `values.yaml`** if the tenant/domain changes
+2. **Customize the site** in the `site/` directory
+3. **Push to GitHub** - deployment is automatic
 
 ## What's Included
 
@@ -31,7 +30,7 @@ Need these? Use [opensaas-template](../opensaas-template) instead.
 ## Project Structure
 
 ```
-simple-template/
+dashboard-demo/
 ├── values.yaml           # Deployment config (update this!)
 ├── agents.yaml           # AI agent config (optional)
 ├── deploy.sh             # One-click deploy script
@@ -77,15 +76,15 @@ GitHub Actions will:
 Edit `values.yaml`:
 
 ```yaml
-namespace: my-site
+namespace: dashboard-demo
 site:
-  name: "my-site"
-  description: "My awesome website"
+  name: "dashboard-demo"
+  description: "Public-facing landing page + no-auth dashboard demo"
 image:
-  repository: "registry.buildville.cloud/buildville/my-site"
+  repository: "registry.buildville.cloud/buildville/dashboard-demo"
 ingress:
   hosts:
-    - host: "my-site.buildville.cloud"
+    - host: "dashboard-demo.buildville.cloud"
 ```
 
 ## Adding Content
